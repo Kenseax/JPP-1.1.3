@@ -43,10 +43,10 @@ public class UserDaoJDBCImpl implements UserDao {
             preparedStatement.setString(2, lastName);
             preparedStatement.setByte(3, age);
             preparedStatement.execute();
-            System.out.println("Пользователь с именем " + name + " успешно добавлен в БД");
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("Пользователь с именем " + name + " добавлен в БД");
     }
 
     public void removeUserById(long id) {
